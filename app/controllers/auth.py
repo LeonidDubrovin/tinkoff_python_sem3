@@ -5,6 +5,7 @@ from app import request
 
 def login(oncall_host: str, oncall_port: int, username: str, password: str):
     url = "http://{}:{}/login".format(oncall_host, oncall_port)
+
     headers = {
         "Content-Type": "application/x-www-form-urlencoded"
     }

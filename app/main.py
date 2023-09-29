@@ -39,7 +39,8 @@ def main():
 
             controllers.team.add_user(team=team_custom, user=user_custom)
 
-            controllers.user.add_duty(team=team_custom, user=user_custom)
+            for duty in user_custom.duty:
+                controllers.user.add_duty(duty=duty, team=team_custom, user=user_custom)
 
     logger.logger.info("Successful parsing!")
 
